@@ -14,7 +14,7 @@ jobs:
     steps:
       - checkout
       - aws-eks/update-kubeconfig-with-authenticator:
-          cluster-name: << parameters.cluster-name >>
+          CLUSTER_NAME: << parameters.cluster-name >>
           install-kubectl: true
       - kubernetes/create-or-update-resource:
           get-rollout-status: true
@@ -24,4 +24,4 @@ workflows:
   deployment:
     jobs:
       - create-deployment:
-          CLUSTER_NAME: shan-tempdev-k8s-09101237
+          cluster-name: shan-tempdev-k8s-09101237
