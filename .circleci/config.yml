@@ -24,4 +24,4 @@ workflows:
   deployment:
     jobs:
       - create-deployment:
-          cluster-name: shan-tempdev-k8s-09101237
+          CLUSTER_NAME: shan-tempdev-k8s-09101237
