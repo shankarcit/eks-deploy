@@ -25,5 +25,3 @@ workflows:
     jobs:
       - create-deployment:
           cluster-name: shan-tempdev-k8s-09101237
-          requires:
-            - aws-eks/create-cluster
