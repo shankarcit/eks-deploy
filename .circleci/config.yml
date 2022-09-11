@@ -23,7 +23,7 @@ jobs:
           install-kubectl: true
       - kubernetes/create-or-update-resource:
           get-rollout-status: true
-          resource-file-path: tests/demo-app-deployment.yaml
+          resource-file-path: deployment/demo-app-deployment.yaml
           resource-name: deployment/demoapp-deployment
 workflows:
   deployment:
