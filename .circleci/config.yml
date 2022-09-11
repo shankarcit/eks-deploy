@@ -11,10 +11,15 @@ jobs:
         description: |
           shan-tempdev-k8s-09101237
         type: string
+      aws-region:
+        description: |
+          ap-northeast-1
+        type: string        
     steps:
       - checkout
       - aws-eks/update-kubeconfig-with-authenticator:
-          CLUSTER_NAME: << parameters.cluster-name >>
+          cluster-name: << parameters.cluster-name >>
+          aws-region: << parameters.aws-region >>
           install-kubectl: true
       - kubernetes/create-or-update-resource:
           get-rollout-status: true
