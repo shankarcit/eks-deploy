@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: demoapp
-        image: 056186925767.dkr.ecr.ap-northeast-1.amazonaws.com/ecr-shankar-tool-box/demo-app:${CIRCLE_BUILD_NUM}
+        image: 056186925767.dkr.ecr.ap-northeast-1.amazonaws.com/ecr-shankar-tool-box/demo-app:${CIRCLE_PREVIOUS_BUILD_NUM}
         ports:
         - name: http
           containerPort: 80
