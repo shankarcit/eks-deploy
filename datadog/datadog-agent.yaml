@@ -28,7 +28,7 @@ spec:
             protocol: TCP
         env:
           - name: DD_API_KEY
-            value: "c4299a78ab48ba6a46013f629bfa31a6"
+            value: "API_KEY_PLACEHOLDER"
           - name: DD_COLLECT_KUBERNETES_EVENTS
             value: "true"
           - name: KUBERNETES
